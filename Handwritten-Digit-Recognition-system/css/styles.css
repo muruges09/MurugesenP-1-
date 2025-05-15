@@ -1,0 +1,199 @@
+/* Global Styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  background: #fafafa;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s ease-in-out; /* Smooth transition for color changes */
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background: #121212; /* Dark background */
+  color: #f5f5f5; /* Light text */
+}
+
+/* Welcome Section Styling */
+.welcome {
+  text-align: center;
+  color: #fff;
+  background-color: #3b8d99;
+  padding: 4% 0; /* Increased padding for better appearance */
+  font-weight: 600;
+  font-family: 'Lora', serif;
+  animation: backgroundFade 5s infinite, fadeIn 1s ease-out;
+}
+
+@keyframes backgroundFade {
+  0% { background-color: #3b8d99; }
+  50% { background-color: #2f6f7a; }
+  100% { background-color: #3b8d99; }
+}
+
+/* Adjusting Welcome Section for Dark Mode */
+body.dark-mode .welcome {
+  background-color: #1c1c1c;
+}
+
+/* Heading Styling */
+.heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem; /* Adjusted size for desktop */
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  color: inherit; /* Inherit color from the parent */
+  transition: color 0.3s ease-in-out;
+}
+
+/* Heading Hover Effect */
+.heading:hover {
+  color: #3498db; /* Highlight on hover */
+}
+
+/* Canvas Styling */
+#sketchpad {
+  height: 300px;
+  width: 100%; /* Full width for better responsiveness */
+  max-width: 300px; /* Limit the maximum width */
+  border: 4px solid #3b8d99;
+  border-radius: 15px;
+  margin: 20px auto;
+  background-color: #fff;
+  transition: border-color 0.3s ease-in-out;
+}
+
+/* Dark Mode Canvas */
+body.dark-mode #sketchpad {
+  background-color: #333;
+  border-color: #2ecc71;
+}
+
+/* Buttons Styling */
+.btn {
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out; /* Apply transition to all properties */
+  padding: 12px 30px;
+  margin: 10px;
+  width: 160px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Button Hover Effects */
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Colors */
+#predict_button {
+  color: #fff;
+  background-color: #3498db;
+}
+
+#clear_button {
+  color: #fff;
+  background-color: #e74c3c;
+}
+
+/* Dark Mode Button Colors */
+body.dark-mode #predict_button {
+  background-color: #2980b9;
+}
+
+body.dark-mode #clear_button {
+  background-color: #c0392b;
+}
+
+/* Footer Styling */
+#footer {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Footer Hover Effects */
+#footer a {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+#footer a:hover {
+  color: #3498db;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  /* Adjusting Welcome Section */
+  .welcome {
+    padding: 10% 0; /* More padding for mobile */
+  }
+
+  /* Heading Font Size */
+  .heading {
+    font-size: 2.5rem; /* Smaller heading size for mobile */
+  }
+
+  /* Canvas Width */
+  #sketchpad {
+    width: 90%; /* Full width for smaller screens */
+    height: 250px; /* Adjust height for mobile */
+  }
+
+  /* Adjusting Button Sizes */
+  .btn {
+    width: 100%; /* Full-width buttons on mobile */
+    padding: 14px 30px;
+    font-size: 18px; /* Larger text for buttons */
+    margin: 10px 0;
+  }
+
+  /* Adjusting Prediction Section */
+  #prediction_heading {
+    font-size: 1.4rem;
+  }
+
+  /* Adjusting Footer */
+  #footer {
+    padding: 15px 0; /* Less padding for mobile */
+  }
+
+  /* Ensure Proper Spacing */
+  .buttons_div {
+    margin-top: 20px;
+  }
+
+  /* Adjusting Title Padding */
+  #title {
+    padding: 2% 3%; /* Less padding for mobile devices */
+  }
+}
+
+/* Extra Small Screens (Mobile-first) */
+@media (max-width: 480px) {
+  /* Mobile Padding for Sketchpad */
+  #sketchpad {
+    width: 80%; /* More space for canvas on small screens */
+  }
+
+  /* Adjusting the Text Color for Better Visibility on Small Screens */
+  p, .heading, #prediction_heading {
+    font-size: 1.2rem; /* Adjust font size for readability */
+  }
+
+  /* Reduce Button Padding for Small Screens */
+  .btn {
+    padding: 10px 20px;
+  }
+
+  /* Small Mobile Screens */
+  .heading {
+    font-size: 2rem;
+  }
+}
